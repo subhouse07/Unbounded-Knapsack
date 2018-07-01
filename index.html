@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Knapsack Problem</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/knapSack.js"></script>
+</head>
+<body>
+	<label for="bagCap">Knapsack Capacity</label>
+	<input type="text" id="bagCap" name="bagCap">
+	<input type="button" id="updateList" value="Update" onclick="updateList()">
+	<div class="errMsg" id="capErr"></div>
+	<div class="row">
+		<div class="column left">
+			<h2>Add Item Details Here</h2>
+			<form>
+			<label for="iName">Name:</label>
+			<input type="text" id="iName">
+			<div class="errMsg" id="nameErr"></div>
+			<label for="iVal">Value:</label>
+			<input type="text" id="iVal">
+			<div class="errMsg" id="valErr"></div>
+			<label for="iWeight">Weight:</label>
+			<input type="text" id="iWeight">
+			<div class="errMsg" id="weightErr"></div>
+			</form>
+			<input type="button" id="addItem" value="Add Item" onclick="addItem()">
+			
+		</div>
+		<div class="column right" id="tableParent">
+			<table id="resultsTable">
+				<tr>
+					<th>Item</th>		
+					<th>Value</th>
+					<th>Weight</th>	
+					<th>Quantity</th>	
+					<th>Total Value</th>
+				</tr>	
+			</table>
+			<label for="maxValue">Maximum Value:</label>
+			<input type="text" id="maxValue" readonly>
+		</div>
+	</div>
+</body>
+</html>
